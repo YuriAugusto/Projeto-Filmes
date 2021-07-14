@@ -6,7 +6,8 @@
       <mat-card-content>
           <mat-form-field class="full-width">
             <!-- name="titulo" formControlName="titulo, através deste trecho de código eu consigo referênciar o campo do html com a variável que irá armazenar o valor de entrada presente na classe cadastro-filmes.component.ts -->
-            <input matInput placeholder="Título" name="titulo" formControlName="titulo">
+            <input matInput placeholder="Título *" name="titulo" formControlName="titulo">
+            <mat-error *ngIf="(cadastro.touched || cadastro.dirty) && f.titulo.errors && f.titulo.errors.required">Campo obrigatório</mat-error>
           </mat-form-field>
           <mat-form-field class="full-width">
             <input matInput placeholder="Link Foto" name="urlFoto" formControlName="urlFoto">
@@ -15,7 +16,7 @@
               <input  matInput
                       readonly
                       [matDatepicker]="picker"
-                      placeholder="Data de Lançamento"
+                      placeholder="Data de Lançamento *"
                       name="dtLancamento"
                       formControlName="dtLancamento"
                       (click)="picker.open()">
@@ -34,7 +35,7 @@
                     min="0"
                     max="10"
                     step="0.1"
-                    placeholder="Nota IMDb"
+                    placeholder="Nota IMDb *"
                     name="nota"
                     formControlName="nota">
           </mat-form-field>
@@ -42,7 +43,7 @@
             <input matInput placeholder="Link IMDb" name="urlIMDb" formControlName="urlIMDb">
           </mat-form-field>
           <mat-form-field class="full-width">
-            <mat-select placeholder="Gênero" formControlName="genero">
+            <mat-select placeholder="Gênero *" formControlName="genero">
               <mat-option value="Ação">Açao</mat-option>
               <mat-option value="Aventura">Aventura</mat-option>
               <mat-option value=">Ficção Científica">Ficção Científica</mat-option>

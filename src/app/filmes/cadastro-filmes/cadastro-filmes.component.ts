@@ -7,13 +7,17 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./cadastro-filmes.component.scss']
 })
 export class CadastroFilmesComponent implements OnInit {
+  //por padrão em angular caso a visibilidade de um método não seja definida ele será public
+  //em métodos não é necessário explicitar um retorno quando ele for void (vazio), porém é uma boa prática deixar o retorno void explícito
 
   cadastro: FormGroup;//variável que representa o FormGroup dentro do html
 
   constructor(private fb: FormBuilder) { }
 
-  //por padrão em angular caso a visibilidade de um método não seja definida ele será public
-  //em métodos não é necessário explicitar um retorno quando ele for void (vazio), porém é uma boa prática deixar o retorno void explícito
+  get f(){
+    return this.cadastro.controls;
+  }
+
   ngOnInit(): void {//executa sempre que o componente for inicializado
 
     this.cadastro = this.fb.group({//Validators permite que sejam aplicadas validações, já required é o método que torna o preenchimento do campo obrigatório
@@ -29,7 +33,7 @@ export class CadastroFilmesComponent implements OnInit {
   }
 
   salvar(): void{
-    console.log("ENTROU");
+    this.cadastro.markAllAsTouched();//toda vez que salvar for clicado em salvar
     if(this.cadastro.invalid){
       return;//n retorna nada e impede o usuário de salvar
     }
