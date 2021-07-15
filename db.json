@@ -159,6 +159,36 @@
       "urlIMDb": "",
       "genero": "Terror",
       "id": 16
+    },
+    {
+      "titulo": "novoTeste",
+      "urlFoto": "",
+      "dtLancamento": "2021-07-20T03:00:00.000Z",
+      "descricao": "",
+      "nota": 0,
+      "urlIMDb": "",
+      "genero": "Romance",
+      "id": 17
+    },
+    {
+      "titulo": "aaaaaaaaaaaa",
+      "urlFoto": "aaaaaaaaaaaaaaaa",
+      "dtLancamento": "2021-07-05T03:00:00.000Z",
+      "descricao": "",
+      "nota": 0,
+      "urlIMDb": "",
+      "genero": "Terror",
+      "id": 18
+    },
+    {
+      "titulo": "teste",
+      "urlFoto": "",
+      "dtLancamento": "2021-07-05T03:00:00.000Z",
+      "descricao": "",
+      "nota": 0,
+      "urlIMDb": "",
+      "genero": "Romance",
+      "id": 19
     }
   ]
 }
