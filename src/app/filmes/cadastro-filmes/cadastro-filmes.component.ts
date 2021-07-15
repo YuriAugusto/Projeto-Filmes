@@ -1,3 +1,4 @@
+import { Alerta } from './../../shared/models/alerta';
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { FilmesService } from './../../core/filmes.service';
@@ -57,11 +58,21 @@ export class CadastroFilmesComponent implements OnInit {
 
   private salvar(filme: Filme): void {
     this.filmeService.salvar(filme).subscribe(() =>{
-      const dialogRef = this.dialog.open(AlertaComponent);
+      const config = {
+        data: {
+          btnSucesso: 'Ir para a listagem',
+          btnCancelar: 'Cadastrar novo filme',
+          corBtnCancelar: 'primary',
+          possuirBtnFechar: true
+        }as Alerta
+      };
+      const dialogRef = this.dialog.open(AlertaComponent, config);
     },
+
     () => {
       alert("ERRO AO SALVAR");
     });
+
   }
 
 }
