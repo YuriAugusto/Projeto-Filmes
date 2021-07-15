@@ -9,6 +9,16 @@
       "urlIMDb": "https://www.imdb.com/title/tt0119654/",
       "genero": "Ação",
       "id": 1
+    },
+    {
+      "titulo": "Loki",
+      "urlFoto": "https://conteudo.imguol.com.br/c/splash/dc/2021/03/18/primeiro-poster-de-loki-serie-chega-em-11-de-junho-no-disney--1616087829746_v2_450x450.jpg",
+      "dtLancamento": "2021-07-11T03:00:00.000Z",
+      "descricao": "The mercurial villain Loki resumes his role as the God of Mischief in a new series that takes place after the events of “Avengers: Endgame.”",
+      "nota": 8.8,
+      "urlIMDb": "https://www.imdb.com/title/tt9140554/?ref_=fn_al_tt_1",
+      "genero": "Ação",
+      "id": 2
     }
   ]
 }
