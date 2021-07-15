@@ -9,14 +9,23 @@ import { FilmesService } from 'src/app/core/filmes.service';
 })
 export class ListagemFilmesComponent implements OnInit {
 
-  filmes: Filme[];
+  readonly qtdPagina = 4;//é uma variável que não pode ter seu valor alterado
+  pagina = 0;
+  filmes: Filme[] = [];//defini inicializei o array filme como vazio
 
   constructor(private filmesService: FilmesService) { }
 
-  ngOnInit() {
-    this.filmesService.listar().subscribe((filmes: Filme[]) => this.filmes = filmes);
+  ngOnInit():void {
+    this.listarFilmes();
+  }
+  onScroll(): void{
+    this.listarFilmes();
   }
 
-
+  private listarFilmes(): void{
+    this.pagina++;
+    this.filmesService.listar(this.pagina, this.qtdPagina)
+      .subscribe((filmes: Filme[]) => this.filmes.push(...filmes));//... == spread operator quebra o array em celulas
+  }
 
 }
