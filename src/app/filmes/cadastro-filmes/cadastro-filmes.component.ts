@@ -12,6 +12,7 @@ export class CadastroFilmesComponent implements OnInit {
   //em métodos não é necessário explicitar um retorno quando ele for void (vazio), porém é uma boa prática deixar o retorno void explícito
 
   cadastro: FormGroup;//variável que representa o FormGroup dentro do html
+  generos: Array<string>;
 
   constructor(public validacao: ValidarCamposService,
     private fb: FormBuilder) { }
@@ -32,6 +33,7 @@ export class CadastroFilmesComponent implements OnInit {
       genero: ['', [Validators.required]]
     });
 
+    this.generos = ['Ação','Romance','Terror','Ficção científica','Comédia','Aventura','Drama'];
   }
 
   salvar(): void{
