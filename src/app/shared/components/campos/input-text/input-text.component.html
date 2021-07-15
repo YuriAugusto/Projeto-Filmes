@@ -1,0 +1,13 @@
+
+<div [formGroup]="formGroup">
+  <mat-form-field class="full-width">
+    <!-- name="titulo" formControlName="titulo, através deste trecho de código eu consigo referênciar o campo do html com a variável que irá armazenar o valor de entrada presente na classe cadastro-filmes.component.ts -->
+    <input  matInput
+            [placeholder]="titulo"
+            [name]="controlName"
+            [formControlName]="controlName">
+    <mat-error *ngIf="validacao.hasErrorValidar(formControl, 'required')">Campo obrigatório</mat-error>
+    <mat-error *ngIf="validacao.hasErrorValidar(formControl, 'minlength')">Campo necessita de no mínimo 2 caracteres</mat-error>
+    <mat-error *ngIf="validacao.hasErrorValidar(formControl, 'maxlength')">Campo pode conter no máximo 256 caracteres</mat-error>
+  </mat-form-field>
+</div>
