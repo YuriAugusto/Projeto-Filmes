@@ -19,6 +19,36 @@
       "urlIMDb": "https://www.imdb.com/title/tt9140554/?ref_=fn_al_tt_1",
       "genero": "Ação",
       "id": 2
+    },
+    {
+      "titulo": "aaa",
+      "urlFoto": "",
+      "dtLancamento": "2021-07-14T03:00:00.000Z",
+      "descricao": "",
+      "nota": 0,
+      "urlIMDb": "",
+      "genero": "Terror",
+      "id": 3
+    },
+    {
+      "titulo": "aaa",
+      "urlFoto": "",
+      "dtLancamento": "2021-07-06T03:00:00.000Z",
+      "descricao": "",
+      "nota": 0,
+      "urlIMDb": "",
+      "genero": "Ação",
+      "id": 4
+    },
+    {
+      "titulo": "aa",
+      "urlFoto": "",
+      "dtLancamento": "2021-07-13T03:00:00.000Z",
+      "descricao": "",
+      "nota": 0,
+      "urlIMDb": "",
+      "genero": "Romance",
+      "id": 5
     }
   ]
 }
