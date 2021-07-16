@@ -12,6 +12,8 @@ export class ListagemFilmesComponent implements OnInit {
 
   readonly qtdPagina = 4;//é uma variável que não pode ter seu valor alterado
   pagina = 0;
+  texto: string;
+  genero: string;
   filmes: Filme[] = [];//defini e inicializei o array filme como vazio
   filtrosListagem:FormGroup;
   generos: Array<string>;
@@ -25,6 +27,18 @@ export class ListagemFilmesComponent implements OnInit {
       genero: ['']
     });
 
+    //aqui eu recupero o campo com o nome texto
+    this.filtrosListagem.get('texto').valueChanges.subscribe((val: string) => {
+      this.texto = val;
+      this.resetarConsulta();
+    });
+
+    //aqui eu recupero o select com o nome genero
+    this.filtrosListagem.get('genero').valueChanges.subscribe((val: string) => {
+      this.genero = val;
+      this.resetarConsulta();
+    });
+
     this.generos = ['Ação','Romance','Terror','Ficção científica','Comédia','Aventura','Drama'];
 
     this.listarFilmes();
@@ -35,8 +49,13 @@ export class ListagemFilmesComponent implements OnInit {
 
   private listarFilmes(): void{
     this.pagina++;
-    this.filmesService.listar(this.pagina, this.qtdPagina)
+    this.filmesService.listar(this.pagina, this.qtdPagina, this.texto, this.genero)
       .subscribe((filmes: Filme[]) => this.filmes.push(...filmes));//... == spread operator quebra o array em celulas
+  }
+  private resetarConsulta(): void{
+    this.pagina = 0;
+    this.filmes = [];
+    this.listarFilmes();
   }
 
 }
