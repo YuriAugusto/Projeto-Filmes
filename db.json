@@ -11,16 +11,6 @@
       "genero": "Ação"
     },
     {
-      "id": 2,
-      "titulo": "MIB: Homens de Preto II ",
-      "urlFoto": "https://m.media-amazon.com/images/M/MV5BMTMxNDA0NTMxMV5BMl5BanBnXkFtZTYwMDE2NzY2._V1_UX182_CR0,0,182,268_AL_.jpg",
-      "dtLancamento": "2012-07-19T03:00:00.000Z",
-      "descricao": "Agent J is sent to find Agent K and restore his memory after the re-appearance of a case from K's past.",
-      "nota": 6.2,
-      "urlIMDb": "https://www.imdb.com/title/tt0120912",
-      "genero": "Ação"
-    },
-    {
       "id": 3,
       "titulo": "MIB: Homens de Preto III",
       "urlFoto": "https://m.media-amazon.com/images/M/MV5BMTU2NTYxODcwMF5BMl5BanBnXkFtZTcwNDk1NDY0Nw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
@@ -109,36 +99,6 @@
       "urlIMDb": "https://www.imdb.com/title/tt2527338/?ref_=vi_md_ti",
       "genero": "Aventura",
       "id": 11
-    },
-    {
-      "titulo": "filme sem foto e descricao",
-      "urlFoto": "",
-      "dtLancamento": "2021-07-06T03:00:00.000Z",
-      "descricao": "",
-      "nota": 10,
-      "urlIMDb": "",
-      "genero": "Terror",
-      "id": 12
-    },
-    {
-      "titulo": "Filme teste para quebrar linhas da descrição",
-      "urlFoto": "",
-      "dtLancamento": "2021-07-12T03:00:00.000Z",
-      "descricao": "",
-      "nota": 0,
-      "urlIMDb": "",
-      "genero": "Terror",
-      "id": 13
-    },
-    {
-      "titulo": "Filme Vazio",
-      "urlFoto": "",
-      "dtLancamento": "2021-07-06T03:00:00.000Z",
-      "descricao": "teste 1\nteste 2\nteste 3\nteste 4\nteste 5",
-      "nota": 0,
-      "urlIMDb": "",
-      "genero": "Terror",
-      "id": 14
     }
   ]
 }
