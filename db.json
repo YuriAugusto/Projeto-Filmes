@@ -109,6 +109,36 @@
       "urlIMDb": "https://www.imdb.com/title/tt2527338/?ref_=vi_md_ti",
       "genero": "Aventura",
       "id": 11
+    },
+    {
+      "titulo": "filme sem foto e descricao",
+      "urlFoto": "",
+      "dtLancamento": "2021-07-06T03:00:00.000Z",
+      "descricao": "",
+      "nota": 10,
+      "urlIMDb": "",
+      "genero": "Terror",
+      "id": 12
+    },
+    {
+      "titulo": "Filme teste para quebrar linhas da descrição",
+      "urlFoto": "",
+      "dtLancamento": "2021-07-12T03:00:00.000Z",
+      "descricao": "",
+      "nota": 0,
+      "urlIMDb": "",
+      "genero": "Terror",
+      "id": 13
+    },
+    {
+      "titulo": "Filme Vazio",
+      "urlFoto": "",
+      "dtLancamento": "2021-07-06T03:00:00.000Z",
+      "descricao": "teste 1\nteste 2\nteste 3\nteste 4\nteste 5",
+      "nota": 0,
+      "urlIMDb": "",
+      "genero": "Terror",
+      "id": 14
     }
   ]
 }

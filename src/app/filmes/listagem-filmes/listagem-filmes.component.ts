@@ -1,8 +1,11 @@
-import { ConfigPrams } from './../../shared/models/config-prams';
-import { FormGroup, FormBuilder } from '@angular/forms';
-import { Filme } from 'src/app/shared/models/filme';
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
+import { debounceTime } from 'rxjs/operators';
 import { FilmesService } from 'src/app/core/filmes.service';
+import { Filme } from 'src/app/shared/models/filme';
+import { ConfigPrams } from './../../shared/models/config-prams';
+
+
 
 @Component({
   selector: 'dio-listagem-filmes',
@@ -10,6 +13,7 @@ import { FilmesService } from 'src/app/core/filmes.service';
   styleUrls: ['./listagem-filmes.component.scss']
 })
 export class ListagemFilmesComponent implements OnInit {
+  readonly semFoto="https://img.icons8.com/ios/452/no-image.png";
 
   config: ConfigPrams = {
     pagina: 0,
@@ -30,9 +34,11 @@ export class ListagemFilmesComponent implements OnInit {
     });
 
     //aqui eu recupero o campo com o nome texto
-    this.filtrosListagem.get('texto').valueChanges.subscribe((val: string) => {
-      this.config.pesquisa = val;
-      this.resetarConsulta();
+    this.filtrosListagem.get('texto').valueChanges
+      .pipe(debounceTime(400))
+      .subscribe((val: string) => {
+        this.config.pesquisa = val;
+        this.resetarConsulta();
     });
 
     //aqui eu recupero o select com o nome genero

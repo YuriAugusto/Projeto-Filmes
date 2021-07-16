@@ -14,8 +14,9 @@
   width: calc(100% - 50px);/* é necessário deixar o sinal de - entre os dois números ex: 10% - 5 */
 }
 
-.mat-card-image{
-  width: auto;
+.mat-card-image{/* aqui eu defino o tamanho das imagens */
+  width: 182px;
+  height: 268px;/* ou 200px */
   margin:auto;
   display: block;
 }
