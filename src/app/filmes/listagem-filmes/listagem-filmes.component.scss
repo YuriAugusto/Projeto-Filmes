@@ -10,6 +10,10 @@
   }
 }
 
+.filtro-listagem{
+  width: calc(100% - 50px);/* é necessário deixar o sinal de - entre os dois números ex: 10% - 5 */
+}
+
 .mat-card-image{
   width: auto;
   margin:auto;
@@ -33,9 +37,9 @@
 }
 
 @media screen and (min-width: 1300px) {
-    .home-content {
-      .home-card {
-        width: calc(25% - 52px);
-      }
+  .home-content {
+    .home-card {
+      width: calc(25% - 52px);
     }
   }
+}
