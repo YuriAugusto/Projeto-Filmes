@@ -20,12 +20,21 @@ const routes: Routes = [
         component: ListagemFilmesComponent
       },
       {
-        path: ':id',//quando passamos ":ex" informamos um parâmetro não uma rota
-        component: VisualizarFilmesComponent
+        path: 'cadastro',
+        children: [
+          {
+            path:'',
+            component: CadastroFilmesComponent
+          },
+          {
+            path:':id',
+            component: CadastroFilmesComponent,
+          }
+        ]
       },
       {
-        path: 'cadastro',
-        component: CadastroFilmesComponent,
+        path: ':id',//quando passamos ":ex" informamos um parâmetro não uma rota
+        component: VisualizarFilmesComponent,
         pathMatch: 'full'
       }
     ]

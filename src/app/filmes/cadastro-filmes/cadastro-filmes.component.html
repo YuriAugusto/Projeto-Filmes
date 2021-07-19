@@ -1,6 +1,6 @@
 <mat-toolbar class="app-title">Cadastrar Filme</mat-toolbar>
 <div class="main-div">
-  <mat-card class="center width50" >
+  <mat-card class="center width50" *ngIf="cadastro">
     <!-- (ngSubmited) é um data bind que faz o envio de informações sempre que o usuário der um submit do formulário -->
     <form autocomplete="off" novalidate [formGroup]="cadastro" (ngSubmit)="submit()" (ngReset)="reiniciarForm()"><!-- cadastro é a variável que representa o form group, presente na classe cadastro-filmes.component.ts -->
       <mat-card-content>

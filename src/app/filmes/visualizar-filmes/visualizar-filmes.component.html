@@ -2,7 +2,7 @@
   <mat-list-item>Título: {{filme.titulo}}</mat-list-item>
   <mat-list-item>Data de Lançamento: {{filme.dtLancamento | date: 'dd/MM/yyyy'}}</mat-list-item>
   <mat-list-item>Gênero: {{filme.genero}}</mat-list-item>
-  <mat-list-item>Descrição: {{filme.descricao}}</mat-list-item>
+  <mat-list-item class="quebrar-linha">Descrição: {{filme.descricao}}</mat-list-item>
   <mat-list-item>Nota: <a [href]="filme.urlIMDb" target="blank" >{{filme.nota}}</a></mat-list-item>
   <img mat-card-image [src]="filme.urlFoto || semFoto" >
 
@@ -10,7 +10,7 @@
 
 <mat-card>
   <mat-card-actions>
-    <button color="accent" mat-raised-button>Editar</button><!-- no type eu defino o tipo de evento q será disparado ao acionar um dos botões -->
+    <button color="accent" mat-raised-button (click)="editar()">Editar</button><!-- no type eu defino o tipo de evento q será disparado ao acionar um dos botões -->
     <button color="warn" mat-raised-button (click)="excluir()">Excluir</button>
   </mat-card-actions>
 </mat-card>
